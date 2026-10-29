@@ -632,6 +632,7 @@ jobs:
           echo "⚡ Remove check_defconfig"
           sed -i 's/check_defconfig//' ./common/build.config.gki
           
+          sed -i 's|CONFIG_KSU_FULL_NAME_FORMAT="%TAG_NAME%-%COMMIT_SHA%-xiaoxiaow@BakaSU""|CONFIG_KSU_FULL_NAME_FORMAT="%TAG_NAME%-爱你不论朝夕."|' ./common/arch/arm64/configs/gki_defconfig
           cat ./common/arch/arm64/configs/gki_defconfig
           
           echo "✅ 内核配置更新完成"
