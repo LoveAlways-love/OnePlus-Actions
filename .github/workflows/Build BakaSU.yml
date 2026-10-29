@@ -631,6 +631,9 @@ jobs:
 
           echo "⚡ Remove check_defconfig"
           sed -i 's/check_defconfig//' ./common/build.config.gki
+          
+          cat ./common/arch/arm64/configs/gki_defconfig
+          
           echo "✅ 内核配置更新完成"
           
       - name: "🔨 Build Kernel | 编译内核 (Clang)"
